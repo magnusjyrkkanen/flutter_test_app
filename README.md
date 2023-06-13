@@ -18,7 +18,7 @@ How to run ``command``
 
 Trying out Flutter, and Dart development
 * Try things out
-* Make an app that does something maybe usefull
+* Make an app that does something maybe useful
 
 ## Acknowledgments
 
