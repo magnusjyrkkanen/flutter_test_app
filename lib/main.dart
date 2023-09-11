@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme:
-            ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 251, 255, 33)),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color.fromARGB(255, 251, 255, 33)),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Test App'),
@@ -109,6 +109,11 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'Flutter Test App text',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            const TextField(
+              obscureText: false,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(), labelText: 'Search'),
             ),
             const Text(
               'You have pushed the button this many times:',
