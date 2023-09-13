@@ -12,8 +12,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    String appTitle = dotenv.get(
+      "APP_NAME",
+    );
     return MaterialApp(
-      title: 'Flutter Test App',
+      title: appTitle,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 251, 255, 33)),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Test App'),
+      home: MyHomePage(title: appTitle),
     );
   }
 }
